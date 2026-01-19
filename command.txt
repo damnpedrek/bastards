@@ -1,2 +1,2 @@
 h264: ffmpeg -i input.mp4 -profile:v baseline -level 3.0 -start_number 0 -hls_time 3 -hls_list_size 0 -f hls output.m3u8 
-h265: ffmpeg -i input.mp4 -c:v libx265 -b:v 8M -maxrate 12M -bufsize 14M -profile:v main -level 3.0 -hls_time 3 -hls_init_time 1 -start_number 0 -f hls output.m3u8
+2: ffmpeg -i input.mp4 -b:v 8M -maxrate 12M -bufsize 14M -profile:v main -level 3.0 -hls_time 3 -hls_init_time 1 -start_number 0 -hls_playlist_type vod -hls_flags independent_segments -f hls output.m3u8
